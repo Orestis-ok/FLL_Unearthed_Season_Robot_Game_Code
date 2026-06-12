@@ -15,22 +15,22 @@ def Route2():
     
     MoveSteering_Seconds(-80, 0, 300) # Μικρή όπισθεν, κολλάει τοίχο
 
-#### Μ05 "Ποιος έζησε εδώ" ####
-    MoveStraight_Distance(400,700,750,True,True,Stop.BRAKE) # Ευθεία φεύγει από την βάση
-    PointTurn_Angle(300, 300, -60, True, Stop.BRAKE) # Αριστερή στροφή για να κάνει το "Ποιος έζησε εδώ"
-    PointTurn_Angle(300, 300, 60, True, Stop.BRAKE) # Στροφή δεξιά 
+### Μ06 "Σιδηρουργείο" ####
+    MoveStraight_Distance(400,700,500,True,True,Stop.BRAKE) # Ευθεία φέυγει από την βάση
+    PointTurn_Angle(300, 300, -35, True, Stop.BRAKE) # Στρίβει αριστερά - είναι μπροστά από το "Τι είναι προς πώληση"
+    MoveStraight_Distance(400,700,132,True,True,Stop.BRAKE) # Συνεχίζει ευθεία   
+    PointTurn_Angle(300, 300, 80, True, Stop.BRAKE) # Στρίβει δεξιά και ευθυγραμμίζεται με το Σιδηρουργείο
+    MoveStraight_Distance(400,700,170,True,True,Stop.BRAKE) # Συνεχίζει ευθεία προς το Σιδηρουργείο
+    leftArm.run_time(500,1500 , then=Stop.BRAKE, wait=True) # Κατεβαίνει ο βραχίονας να πιάσει Μυλόπετρα και περιστρέφεται ο 2ος βραχίονας να πέσουν τα 3 Μπλοκ Ορυκτών
+    wait(500) 
+    leftArm.run_time(-600,900 , then=Stop.BRAKE, wait=True) # Σηκώνεται ο βραχίονας με τη Μυλόπετρα
     
-#### Μ06 "Σιδηρουργείο & Μυλόπετρα" ####
-    MoveStraight_Distance(400,700,-300,True,True,Stop.BRAKE) # Όπισθεν - απομακρύνεται από το "Ποιος έζησε εδώ"
-    PointTurn_Angle(300, 300, -30, True, Stop.BRAKE) # Αριστερή στροφή είναι μπροστά από την τέντα
-    MoveStraight_Distance(400,700,150,True,True,Stop.BRAKE) # Ευθεία προς το "Ποιος έζησε εδώ"
-    PointTurn_Angle(300, 300, 75, True, Stop.BRAKE) # Στροφή δεξιά είναι μπροστά από το Σιδηρουργείο
-    MoveStraight_Distance(400,700,135,True,True,Stop.BRAKE) # Ευθεία προς το Σιδηρουργείο
-    leftArm.run_time(1000,1000 , then=Stop.BRAKE, wait=True) # Κατεβάζει τον βραχίονα 
-    MoveStraight_Distance(400,700,30,True,True,Stop.BRAKE) # Πηγαίνει ευθεία για να πιάσει την μυλόπετρα
-    leftArm.run_time(-300,1200 , then=Stop.BRAKE, wait=True) # Ανεβάζει τον βραχίονα με την μυλόπετρα
+# # ## Πορεία προς Μ05 "Ποιος έζησε εδώ" ####
+    MoveStraight_Distance(400,400,-210,True,True,Stop.BRAKE) # μικρή όπισθεν, φεύγει από Σιδηρουργείο
+    PointTurn_Angle(300, 300, -25, True, Stop.BRAKE) # Στροφή αριστερή για να ισιώσει με το "Ποιος έζησε εδώ"
+    MoveStraight_Distance(400,400,190,True,True,Stop.BRAKE) # ευθεία, είναι δίπλα στο "Ποιος έζησε εδώ"
+    PointTurn_Angle(300, 300, -30, True, Stop.BRAKE) # Στροφή αριστερα ωστε να ισιώσει το δάπεδο της δομής του "Ποιος έζησε εδώ"
+    MoveStraight_Distance(400,400,-50,True,True,Stop.BRAKE) # ευθεία, είναι δίπλα στο "Ποιος έζησε εδώ"
     
-#### Πορεία προς την βάση ####
-    MoveStraight_Distance(400,700,-200,True,True,Stop.BRAKE) # Όπισθεν προς την βάση
-    PointTurn_Angle(300, 300, -75, True, Stop.BRAKE) # Αριστερή στροφή προς την βάση
-    MoveStraight_Distance(400,700,-600,True,True,Stop.BRAKE) # Γυρνά πίσω στην βάση
+# #### Επιστροφή στη Βάση ####
+    MoveSteering_Seconds(-900, -10, 1900) # Γυρνάει πίσω στη Βάση
