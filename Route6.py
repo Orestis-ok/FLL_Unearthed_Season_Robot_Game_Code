@@ -15,7 +15,8 @@ def Route6():
 
 #### Mission 13 "Ανακατασκευή αγάλματος" ####
 
-    wait(300)
+    MoveSteering_Seconds(-50, 0, 300) # Μικρή όπισθεν, κολλάει τοίχο
+
     MoveStraight_Distance(900,700,190,True,True,Stop.BRAKE) # Φεύγει από τη Βάση
     PointTurn_Angle(700, 700, -87, True, Stop.BRAKE) # Στροφή αριστερά 87 μοίρες
     MoveStraight_Distance(700,700,860,True,True,Stop.BRAKE) # Ευθεία από τη Βάση κατά μήκος του Νότιου τοίχου
