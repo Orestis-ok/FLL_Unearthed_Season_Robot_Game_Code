@@ -11,12 +11,11 @@
 
 ## Project Structure
 
+```text
 FLL_Unearthed_Season_Robot_Game_Code/
 ├── MasterProgram.py 
-├── MyLibrary
-├── README.md
+├── MyLibrary.py
 ├── Route1.py
-├── Route10.py
 ├── Route2.py
 ├── Route3.py
 ├── Route4.py
@@ -24,4 +23,7 @@ FLL_Unearthed_Season_Robot_Game_Code/
 ├── Route6.py
 ├── Route7.py
 ├── Route8.py
-└── Route9.py
+├── Route9.py
+├── Route10.py
+└── README.md
+```
