@@ -36,8 +36,8 @@ THRESHOLD = (WHITE - BLACK) / 2
 hub = PrimeHub(top_side=Axis.Z, front_side=Axis.X)
 hub.system.set_stop_button([Button.BLUETOOTH])
 
-leftColour = ColorSensor(Port.B)
-rightColour = ColorSensor(Port.F)
+# leftColour = ColorSensor(Port.B)
+# rightColour = ColorSensor(Port.F)
 leftArm = Motor(port=Port.A, positive_direction=Direction.CLOCKWISE, gears=[12,20])
 rightArm = Motor(port=Port.E, positive_direction=Direction.CLOCKWISE, gears=[12,20])
 leftDrive = Motor(port=Port.D, positive_direction=Direction.CLOCKWISE)
@@ -79,6 +79,8 @@ def MoveStraight_Distance(speed, accel, distance, useGyro, waitForComplete, stop
     # Action !!!
     driveBase.straight(distance, stopMethod, waitForComplete)
 
+#### Αντώνης ####
+
 def TankDrive_Distance_mm(left_speed, right_speed, distance_mm, stopMethod=Stop.BRAKE):
     # Υπολογισμός περιφέρειας ρόδας
     wheel_circumference = pi * WHEEL_SIZE
@@ -95,6 +97,9 @@ def TankDrive_Distance_mm(left_speed, right_speed, distance_mm, stopMethod=Stop.
 def TankDrive_Time_ms(left_speed, right_speed, time_ms, stopMethod=Stop.BRAKE):
     leftDrive.run_time(left_speed, time_ms, then=stopMethod, wait=False)
     rightDrive.run_time(right_speed, time_ms, then=stopMethod, wait=True)
+
+#### Αντώνης ####
+
 
 # ======================== AUTO ALIGN (BOTH ARMS) ========================
 # Non-blocking jiggle for attachment gear alignment.
@@ -139,6 +144,10 @@ def AutoAlign_Stop(brake=True):
         leftArm.stop()
         rightArm.stop()
 # =======================================================================
+
+
+
+#### Assasins ####
 
 def MoveCurve_Angle(speed, accel, radius, angle, waitForComplete, stopMethod):
     # Reset gyro and driveBase value
