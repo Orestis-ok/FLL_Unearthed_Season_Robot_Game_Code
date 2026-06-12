@@ -13,9 +13,9 @@ def Route10():
     
     PortView_Battery()
 
-    # leftArm.run_time(700, 900, then=Stop.BRAKE, wait=True) # Κατεβάζει τον καταπέλτη 
-    # while Button.RIGHT not in hub.buttons.pressed(): 
-        # wait(200) # Περιμένει να πατηθεί το δεξί κουμπί να φύγει το ρομπότ
+    leftArm.run_time(700, 900, then=Stop.BRAKE, wait=True) # Κατεβάζει τον καταπέλτη 
+    while Button.RIGHT not in hub.buttons.pressed(): 
+        wait(200) # Περιμένει να πατηθεί το δεξί κουμπί να φύγει το ρομπότ
 
     MoveSteering_Seconds(-80, 0, 300) # Μικρή όπισθεν, κολλάει τοίχο
 
