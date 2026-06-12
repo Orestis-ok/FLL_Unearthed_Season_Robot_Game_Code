@@ -11,17 +11,20 @@ from MyLibrary import *
 ######################## Route program ########################
 def Route4():
 
-
    PortView_Battery()
 
-#### Mission 11 "Αντικείμενα Ψαράδων" ####
-   MoveSteering_Seconds(400, -10, 900)
-   leftArm.run_time(500, 1400, then=Stop.BRAKE, wait=False) # Φεύγει από τη Βάση περιστρέφοντας τον τροχό
-   MoveSteering_Seconds(100, -5, 1850)
-   
-   leftArm.run_time(400, 1200, then=Stop.BRAKE, wait=False) # Περιστροφή του τροχού για να σηκωθούν τα Αντικείμενα
-   MoveSteering_Seconds(30, 0, 1000)
+### Αποχώρηση από Βάση ####
+   MoveSteering_Seconds(-50, 0, 300) # Μικρή όπισθεν, κολλάει τοίχο
 
-   leftArm.run_time(-500, 1800, then=Stop.BRAKE, wait=False) # Φεύγει από Αντικείμενα Ψαράδων περιστρέφοντας τον τροχό
-   MoveStraight_Distance(100,300,-200,True,True,Stop.BRAKE) # Αποχώρηση με μικρή ταχύτητα για να μη βρει ο τροχός πάνω στα Αντικείμενα
-   MoveStraight_Distance(900,900,-290,True,True,Stop.BRAKE) # Επιστροφή στη Βάση 
+#### Μ10 "Αναποδογυρίστε τη ζυγαριά"  Δίσκος Ζύγισης #### 
+
+   MoveStraight_Distance(800,700,80,True,True,Stop.BRAKE) # Ευθεία, φεύγει από τη Βάση
+   PointTurn_Angle(700, 700, -49, True, Stop.BRAKE) # Στροφή αριστερα 48 μοίρες
+   MoveStraight_Distance(700,700,370,True,True,Stop.BRAKE) # Το έμβολο είναι διπλα στον Δίσκο Ζύγισης
+   MoveStraight_Distance(300,700,60,True,True,Stop.BRAKE) # Το έμβολο είναι κάτω από τον Δίσκο Ζύγισης
+
+#### Επιστροφή στη Βάση ####
+   MoveSteering_Seconds(-900, -70, 500) # Όπισθεν, γυρίζει στη Βάση
+   MoveSteering_Seconds(-900, 110, 1350) # Όπισθεν, γυρίζει στη Βάση
+
+   
