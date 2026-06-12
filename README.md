@@ -7,7 +7,7 @@
 ## Installation
 - Download the .zip file from this GitHub repository
 - Extract the .zip file
-- Import the code in code.pybricks.com
+- Import the code into code.pybricks.com
 
 ## Project Structure
 
