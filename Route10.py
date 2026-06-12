@@ -45,9 +45,11 @@ def Route10():
     MoveStraight_Distance(250,700, 100,True,True,Stop.BRAKE)# Ευθεία με κατεύθυνση το forum
     rightArm.run_time(300, 700, then=Stop.BRAKE, wait=False) # Ανεβάζει τον βραχίονα χωρίς το τρενάκι
     leftArm.run_time(-1000,1000 , then=Stop.BRAKE, wait=True) # Σηκώνει τον καταπέλτη (speed, time)
-    MoveStraight_Distance(400,500,75,True,True,Stop.BRAKE) # Ευθεία μπαίνει στο forum (65 παλιό)
+    MoveStraight_Distance(400,500, 75,True,True,Stop.BRAKE) # Ευθεία μπαίνει στο forum (65 παλιό)
+    PointTurn_Angle(250, 200, 20 , True, Stop.BRAKE) # στροφή δεξιά
 
-# # #### Τελευταία σημαία ####
+
+# # # #### Τελευταία σημαία ####
     MoveStraight_Distance(400,500, -40,True,True,Stop.BRAKE)
-    PointTurn_Angle(300, 400, -65, True, Stop.BRAKE) # (-56 παλιό)
-    MoveStraight_Distance(800,500,-65,True,True,Stop.BRAKE) # Όπισθεν αφήνει την τελυταία σημαία
+    PointTurn_Angle(300, 400, -80, True, Stop.BRAKE) # (-56 παλιό)
+    MoveStraight_Distance(800,500,-70,True,True,Stop.BRAKE) # Όπισθεν αφήνει την τελυταία σημαία
