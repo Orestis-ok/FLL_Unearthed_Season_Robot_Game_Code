@@ -1,4 +1,4 @@
-# FLL Unearthed Season west side Robot Game Code 
+# FLL Unearthed Season Robot Game Code 
 
 ## Requirements 
 - Pybricks firmaware installed in Spike Prime Hub
