@@ -24,7 +24,9 @@ def Route4():
    MoveStraight_Distance(300,700,60,True,True,Stop.BRAKE) # Το έμβολο είναι κάτω από τον Δίσκο Ζύγισης
 
 #### Επιστροφή στη Βάση ####
-   MoveSteering_Seconds(-900, -70, 500) # Όπισθεν, γυρίζει στη Βάση
-   MoveSteering_Seconds(-900, 110, 1200) # Όπισθεν, γυρίζει στη Βάση (speed, steering, duration)
+   MoveSteering_Seconds(-900, -50, 500) # Όπισθεν, γυρίζει στη Βάση
+   MoveSteering_Seconds(-900, 90, 1100) # Όπισθεν, γυρίζει στη Βάση
+   # MoveSteering_Seconds(900, 0, 300) # Όπισθεν, γυρίζει στη Βάση
+
 
    
