@@ -1,2 +1,10 @@
-# FLL_Unearthed_Season_Robot_Game_Code
-Fll Unearthed Season Robot Game Code by the Inventors
+# FLL Unearthed Season west side Robot Game Code 
+
+# Requirements 
+- Pybricks firmaware installed in Spike Prime Hub
+- Pybricks code
+
+## Installation
+- Download the .zip file from this GitHub repository
+- Extract the .zip file
+- Import the code in [Pybricks Code] (code.pybricks.com)
