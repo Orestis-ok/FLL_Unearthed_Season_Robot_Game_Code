@@ -14,7 +14,7 @@ def Route5():
     PortView_Battery()
 
 #### Mission 11 "Αντικείμενα Ψαράδων" ####
-    MoveSteering_Seconds(400, -10, 900)
+    MoveSteering_Seconds(400, -6, 900)
     leftArm.run_time(500, 1700, then=Stop.BRAKE, wait=False) # Φεύγει από τη Βάση περιστρέφοντας τον τροχό
     MoveSteering_Seconds(100, -5, 2000)
    
