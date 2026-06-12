@@ -8,3 +8,20 @@
 - Download the .zip file from this GitHub repository
 - Extract the .zip file
 - Import the code in code.pybricks.com
+
+## Project Structure
+
+FLL_Unearthed_Season_Robot_Game_Code/
+├── MasterProgram.py 
+├── MyLibrary
+├── README.md
+├── Route1.py
+├── Route10.py
+├── Route2.py
+├── Route3.py
+├── Route4.py
+├── Route5.py
+├── Route6.py
+├── Route7.py
+├── Route8.py
+└── Route9.py
