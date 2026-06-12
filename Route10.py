@@ -12,16 +12,29 @@ from MyLibrary import *
 def Route10(): 
     
     PortView_Battery()
+
+    leftArm.run_time(700, 900, then=Stop.BRAKE, wait=True) # Κατεβάζει τον καταπέλτη 
+    while Button.RIGHT not in hub.buttons.pressed(): 
+        wait(200) # Περιμένει να πατηθεί το δεξί κουμπί να φύγει το ρομπότ
+
+    MoveSteering_Seconds(-80, 0, 300) # Μικρή όπισθεν, κολλάει τοίχο
+
+#### Απόχώρηση από τη Βάση #### 
+    MoveStraight_Distance(400,700,760,True,True,Stop.BRAKE) # Ευθεία, φεύγει από τη Βάση
+    PointTurn_Angle(300, 200, 91, True, Stop.BRAKE) # στροφή δεξιά 90 μοιρών
+    MoveStraight_Distance(400,200,800,True,True,Stop.BRAKE) # ευθεία, διασχιζει όλη τη Βόρεια πλευρά
     
-    #### Σημαία ####
-    MoveStraight_Distance(750,700,550,True,True,Stop.BRAKE) # Ευθεία φεύγει από την βάση
-    PointTurn_Angle(400, 400, 28, True, Stop.BRAKE) # Κάνει στροφή 28 μοίρες δεξιά και ευθυγραμμίζεται με την βάση για το σημαιάκι
-    MoveStraight_Distance(750,700,-350,True,True,Stop.BRAKE) # Απομακρύνεται από την βάση με το σημαιάκι κάνοντας όπισθεν
-    PointTurn_Angle(400, 400, 28, True, Stop.BRAKE) # Κάνει στροφή 28 μοίρες δεξιά και ευθυγραμμίζεται με το forum
+#### Σημαία ####
+    PointTurn_Angle(65, 200, -57, True, Stop.BRAKE) # μικρή στροφή αριστερά, είναι έτοιμο να αφήσει τη Σημαία
+    MoveStraight_Distance(400,700, -50,True,True,Stop.BRAKE) # όπισθεν, αφήνει τη Σημαία
+    PointTurn_Angle(250, 200, 65 , True, Stop.BRAKE) # στροφή δεξιά
     
-    #### Forum ####
-    MoveStraight_Distance(750,700,200,False,True,Stop.BRAKE) # Ευθεία κατευθύνεται προς το forum
-    leftArm.run_time(-600, 1000, then=Stop.BRAKE, wait=False) # Ανεβάζει με αρνητική τιμή τον μηχανισμό στο προσάρτημα ώστε να απελευθερωθούν τα αντικείμενα 
-    MoveStraight_Distance(750,700,230,False,True,Stop.BRAKE) # Κάνει επιπλέον ευθεία όπου σε αυτήν απελευθερώνονται τα αντικείμενα στο forum για μεγαλύτερη σιγουριά
-    wait (300) # Κάνει μικρή παύση για να σιγουρευτούμε πως είχε μπει σωστά
-    MoveStraight_Distance(750,700,-500,True,True,Stop.BRAKE) # Επιστρέφει πίσω στην βάση με όπισθεν
+#### Forum ####
+    MoveStraight_Distance(400,500,-465 ,True,True,Stop.BRAKE)# όπισθεν πορεία στο Forum
+
+    MoveSteering_Seconds(-300, 100, 700) # όπισθεν γωνία, ισιώνει με Forum
+    MoveStraight_Distance(400,500,120  ,True,True,Stop.BRAKE) # Ευθεία, είναι δίπλα στο Forum
+
+    leftArm.run_time(-900,1000 , then=Stop.BRAKE, wait=True) # Σηκώνει τον καταπέλτη
+    MoveStraight_Distance(400,500,100  ,True,True,Stop.BRAKE) # ευθεία μέσα μπαίνει στο Forum
+    MoveSteering_Seconds(-500, -90, 750)
