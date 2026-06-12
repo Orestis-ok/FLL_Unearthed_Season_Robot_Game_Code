@@ -12,18 +12,24 @@ from MyLibrary import *
 def Route9(): 
     
     PortView_Battery()
-    
-    MoveSteering_Seconds(-50, 0, 300) # Μικρή όπισθεν, κολλάει τοίχο
 
-    MoveStraight_Distance(750,700,550,True,True,Stop.BRAKE) # Ευθεία φεύγει από την βάση
-    PointTurn_Angle(400, 400, 28, True, Stop.BRAKE) # Κάνει στροφή 28 μοίρες δεξιά και ευθυγραμμίζεται με την βάση για το σημαιάκι
-    MoveStraight_Distance(750,700,-350,True,True,Stop.BRAKE) # Απομακρύνεται από την βάση με το σημαιάκι κάνοντας όπισθεν
-    
-    PointTurn_Angle(400, 400, 28, True, Stop.BRAKE) # Κάνει στροφή 28 μοίρες δεξιά και ευθυγραμμίζεται με το forum
-    MoveStraight_Distance(750,700,200,False,True,Stop.BRAKE) # Ευθεία κατευθύνεται προς το forum
-    leftArm.run_time(-600, 1000, then=Stop.BRAKE, wait=False) # Ανεβάζει με αρνητική τιμή τον μηχανισμό στο προσάρτημα ώστε να απελευθερωθούν τα αντικείμενα 
-    MoveStraight_Distance(750,700,230,False,True,Stop.BRAKE) # Κάνει επιπλέον ευθεία όπου σε αυτήν απελευθερώνονται τα αντικείμενα στο forum για μεγαλύτερη σιγουριά
-    wait (500) # Κάνει μικρή παύση για να σιγουρευτούμε πως είχε μπει σωστά
-    
-    
-    MoveStraight_Distance(750,700,-500,True,True,Stop.BRAKE) # Επιστρέφει πίσω στην βάση με όπισθεν
+    ##### Αποχώρηση από τη Βάση με όπισθεν #####
+    MoveStraight_Distance(800,700,-670,True,True,Stop.BRAKE) # Πηγαίνει με όπισθεν μέχρι τον Βόρειο τοίχο
+    PointTurn_Angle(300, 300, 12, True, Stop.BRAKE) # μικρή στροφή, ετοιμάζεται να βρει τοίχο
+    MoveSteering_Seconds(-600, 0, 1100) # Όπισθεν κολλάει τοίχο
+    leftArm.run_time(300,300, then=Stop.BRAKE, wait=True) # μικρή περιστροφή του άξονα ώστε να πάρει τη σωστή θέση
+
+    ##### Προσεκτική αποκατάσταση M04 #####
+
+    MoveStraight_Distance(800,500,60,True,True,Stop.BRAKE) # Ευθεία φεύγει από τοίχο
+    PointTurn_Angle(300, 300, -90, True, Stop.BRAKE) # Στροφή αριστερά ώστε να ευθυγραμμιστεί με το Αντικείμενο
+    MoveSteering_Seconds(100, -10, 1200) # ευθεία φτάνει δίπλα στο Αντικείμενο
+
+    leftArm.run_time(-800,1000, then=Stop.BRAKE, wait=True) # Στρίβει ο βραχίονας να πιάσει το Αντικείμενο
+    wait (1000)
+
+    MoveStraight_Distance(100,500,-120,True,True,Stop.BRAKE) # όπισθεν, βγαίνει με το Αντικείμενο
+
+    #### Επιστροφή στη Βάση ####
+    PointTurn_Angle(300, 300, 105, True, Stop.BRAKE) # στροφή δεξιά, η Βάση είναι μπροστά
+    MoveSteering_Seconds(900, 0, 2000) # Όπισθεν κολλάει τοίχο
