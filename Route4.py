@@ -25,6 +25,6 @@ def Route4():
 
 #### Επιστροφή στη Βάση ####
    MoveSteering_Seconds(-900, -70, 500) # Όπισθεν, γυρίζει στη Βάση
-   MoveSteering_Seconds(-900, 110, 1400) # Όπισθεν, γυρίζει στη Βάση
+   MoveSteering_Seconds(-900, 110, 1200) # Όπισθεν, γυρίζει στη Βάση (speed, steering, duration)
 
    
