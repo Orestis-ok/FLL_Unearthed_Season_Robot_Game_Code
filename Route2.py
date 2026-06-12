@@ -33,4 +33,4 @@ def Route2():
     MoveStraight_Distance(400,400,-50,True,True,Stop.BRAKE) # ευθεία, είναι δίπλα στο "Ποιος έζησε εδώ"
 
 #### Επιστροφή στη Βάση ####
-    MoveSteering_Seconds(-900, -35, 1900) # Γυρνάει πίσω στη Βάση
+    MoveSteering_Seconds(-900, -10, 1800) # Γυρνάει πίσω στη Βάση
