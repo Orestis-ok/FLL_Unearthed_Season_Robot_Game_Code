@@ -22,13 +22,13 @@ def Route8():
     PointTurn_Angle(300, 300, -45, True, Stop.BRAKE) # Στροφή αριστερά 45 μοιρών, είναι ΜΠΡΟΣΤΑ από "Αποκάλυψη Χάρτη"
 
     MoveStraight_Distance(200,500,170,True,True,Stop.BRAKE)
-    rightArm.run_time(800,800 , then=Stop.BRAKE, wait=False) # Ανεβαίνει ο δεξιός βραχίονας να σηκώσει το "Επιφανειακό χώμα" 
-    leftArm.run_time(800,1000 , then=Stop.BRAKE, wait=False) # Κατεβαίνει ο αριστερός βραχίονας για να πιάσει το πινέλο
+    rightArm.run_time(800,800 , then=Stop.BRAKE, wait=True) # Ανεβαίνει ο δεξιός βραχίονας να σηκώσει το "Επιφανειακό χώμα" 
+    leftArm.run_time(900,1000 , then=Stop.BRAKE, wait=False) # Κατεβαίνει ο αριστερός βραχίονας για να πιάσει το πινέλο
     wait(300) # Περιμένει λίγο για να σιγουρευτούμε πως έχει πιάσει το πινέλο
     leftArm.run_time(-300,1000 , then=Stop.BRAKE, wait=True)  # Ανεβαίνει ο αριστερός βραχίονας με το πινέλο 
     
 #### Επιστροφή στη Βάση #####
     MoveStraight_Distance(300,500,-150,True,True,Stop.BRAKE) # όπισθεν
     PointTurn_Angle(300, 300, 42, True, Stop.BRAKE) # Στροφή δεξιά 45 μοιρών
-    MoveSteering_Seconds(-900, 10, 1900)
+    MoveSteering_Seconds(-900, 2, 1900)
     wait(300)
