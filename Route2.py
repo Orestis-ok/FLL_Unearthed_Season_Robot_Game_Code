@@ -20,14 +20,14 @@ def Route2():
     MoveStraight_Distance(400,700,660,True,True,Stop.BRAKE) # ευθεία, είναι δίπλα στο "Ποιος έζησε εδώ"
     PointTurn_Angle(300, 300, 45, True, Stop.BRAKE) # Στροφή αριστερα ωστε να ισιώσει το δάπεδο της δομής του "Ποιος έζησε εδώ"
     MoveStraight_Distance(400,400,80,True,True,Stop.BRAKE) # ευθεία, είναι δίπλα στο "Ποιος έζησε εδώ"
-    leftArm.run_time(900,1500 , then=Stop.BRAKE, wait=True) # Κατεβαίνει ο βραχίονας να πιάσει Μυλόπετρα και περιστρέφεται ο 2ος βραχίονας να πέσουν τα 3 Μπλοκ Ορυκτών
+    leftArm.run_time(500,1500 , then=Stop.BRAKE, wait=True) # Κατεβαίνει ο βραχίονας να πιάσει Μυλόπετρα και περιστρέφεται ο 2ος βραχίονας να πέσουν τα 3 Μπλοκ Ορυκτών
     wait(500) 
     leftArm.run_time(-600,2100 , then=Stop.BRAKE, wait=True) # Σηκώνεται ο βραχίονας με τη Μυλόπετρα
 
 ## Πορεία προς Μ05 "Ποιος έζησε εδώ" ####
 
     MoveStraight_Distance(400,400,-210,True,True,Stop.BRAKE) # μικρή όπισθεν, φεύγει από Σιδηρουργείο
-    PointTurn_Angle(300, 300, -25, True, Stop.BRAKE) # Στροφή αριστερή για να ισιώσει με το "Ποιος έζησε εδώ"
+    PointTurn_Angle(300, 300, -26, True, Stop.BRAKE) # Στροφή αριστερή για να ισιώσει με το "Ποιος έζησε εδώ"
     MoveStraight_Distance(400,400,190,True,True,Stop.BRAKE) # ευθεία, είναι δίπλα στο "Ποιος έζησε εδώ"
     PointTurn_Angle(300, 300, -29, True, Stop.BRAKE) # Στροφή αριστερα ωστε να ισιώσει το δάπεδο της δομής του "Ποιος έζησε εδώ"
     MoveStraight_Distance(400,400,-50,True,True,Stop.BRAKE) # ευθεία, είναι δίπλα στο "Ποιος έζησε εδώ"
