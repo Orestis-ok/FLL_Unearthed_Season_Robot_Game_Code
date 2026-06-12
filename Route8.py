@@ -30,5 +30,5 @@ def Route8():
 #### Επιστροφή στη Βάση #####
     MoveStraight_Distance(300,500,-150,True,True,Stop.BRAKE) # όπισθεν
     PointTurn_Angle(300, 300, 42, True, Stop.BRAKE) # Στροφή δεξιά 45 μοιρών
-    MoveSteering_Seconds(-900, 2, 1900)
+    MoveSteering_Seconds(-900, 2, 2100)
     wait(300)
