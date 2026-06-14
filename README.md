@@ -7,7 +7,7 @@
 ## Installation
 - Download the .zip file from this GitHub repository
 - Extract the .zip file
-- **Delete** the "README.md" file
+- **DELETE** the "README.md" file
 - Import the code into code.pybricks.com
 
 ## Project Structure
